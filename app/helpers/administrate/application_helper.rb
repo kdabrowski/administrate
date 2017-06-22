@@ -19,6 +19,10 @@ module Administrate
         )
     end
 
+    def resource_index_route_key(display_resource_name)
+      ActiveModel::Naming.route_key(display_resource_name(resource_name))
+    end
+
     def sort_order(order)
       case order
       when "asc" then "ascending"
